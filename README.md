@@ -98,7 +98,8 @@ customer-churn-prediction-gradient-boosting/
 ├── requirements.txt
 └── .gitignore
 
-```markdown id="x8hrbu"
+```
+
 ## Methodology
 
 The project follows a structured applied machine learning workflow designed to move from raw data to business-ready churn recommendations.
