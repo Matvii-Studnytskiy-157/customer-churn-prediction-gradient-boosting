@@ -72,7 +72,7 @@ These steps produced a clean, model-ready dataset suitable for both interpretabl
 
 ## Repository Structure
 
-```text
+```
 customer-churn-prediction-gradient-boosting/
 ├── data/
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
@@ -97,7 +97,6 @@ customer-churn-prediction-gradient-boosting/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-
 ```
 
 ## Methodology
