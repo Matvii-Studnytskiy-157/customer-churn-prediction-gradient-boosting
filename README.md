@@ -146,3 +146,62 @@ The following baseline models were compared:
 
 This workflow ensures that the final model is not only predictive, but also interpretable and operationally useful.
 
+## Modeling Results
+
+### Best Baseline — Logistic Regression
+- **Accuracy:** 0.80
+- **Precision:** 0.65
+- **Recall:** 0.57
+- **F1-score:** 0.61
+- **ROC-AUC:** 0.84
+- **Average Precision:** 0.62
+
+### Tuned XGBoost — Default Threshold (0.50)
+- **Accuracy:** 0.81
+- **Precision:** 0.65
+- **Recall:** 0.56
+- **F1-score:** 0.60
+- **ROC-AUC:** 0.84
+- **Average Precision:** 0.66
+
+### Tuned XGBoost — Optimized Threshold (0.30)
+- **Accuracy:** 0.75
+- **Precision:** 0.52
+- **Recall:** 0.78
+- **F1-score:** 0.63
+- **ROC-AUC:** 0.84
+- **Average Precision:** 0.66
+
+### Performance Interpretation
+The final results show that:
+
+- **Logistic Regression** is a very strong baseline and difficult to outperform in default-threshold classification
+- **Tuned XGBoost** matches the strongest baseline on standard metrics while improving ranking-oriented churn performance
+- **Threshold optimization** makes the final model substantially more effective for proactive retention targeting
+
+This means the final solution is strongest not because it maximizes accuracy alone, but because it produces a better balance between **ranking quality**, **churn capture**, and **practical business usefulness**.
+
+## Final Model Selection
+
+### Final Selected Model
+**Tuned XGBoost with an optimized classification threshold of 0.30**
+
+### Why this model was selected
+The final model was chosen because it:
+
+- remains highly competitive with the strongest baseline in standard classification metrics
+- outperforms the best baseline in **Average Precision**
+- improves meaningfully after hyperparameter tuning
+- becomes more effective for retention intervention after threshold optimization
+- remains interpretable and aligned with the business structure of churn
+
+### Practical interpretation
+This final solution supports two complementary use cases:
+
+1. **Ranked churn-risk scoring**  
+   Use tuned XGBoost probabilities to prioritize customers by churn risk.
+
+2. **Threshold-based intervention**  
+   Use the optimized threshold of **0.30** when the goal is to identify a broader set of likely churners for proactive outreach.
+
+In other words, the selected model is not only the strongest advanced model in the project — it is also the most operationally useful one.
