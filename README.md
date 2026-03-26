@@ -205,3 +205,155 @@ This final solution supports two complementary use cases:
    Use the optimized threshold of **0.30** when the goal is to identify a broader set of likely churners for proactive outreach.
 
 In other words, the selected model is not only the strongest advanced model in the project — it is also the most operationally useful one.
+
+## Key Findings
+
+The final model and the exploratory analysis point to a consistent set of churn-related patterns.
+
+### Most important original features
+- **Contract**
+- **InternetService**
+- **OnlineSecurity**
+- **TechSupport**
+- **PaperlessBilling**
+- **PaymentMethod**
+- **tenure**
+
+### Most important transformed features
+- `Contract_Month-to-month`
+- `InternetService_Fiber optic`
+- `OnlineSecurity_No`
+- `TechSupport_No`
+- `PaperlessBilling_Yes`
+- `PaymentMethod_Electronic check`
+
+### Main analytical takeaway
+Customer churn in this dataset is strongly associated with:
+
+- weak contractual commitment
+- service and support gaps
+- riskier billing and payment behavior
+- fragile early customer relationships
+- certain internet-service configurations
+
+The strongest signal by far is **contract structure**, especially the presence of a **month-to-month contract**, which dominates the final feature importance profile.
+
+## Business Recommendations
+
+The final model suggests several high-priority retention actions.
+
+### 1. Prioritize month-to-month customers
+Contract structure is the strongest churn-related signal in the project. Customers on month-to-month plans should be the first target for proactive retention campaigns, loyalty incentives, and contract-conversion offers.
+
+### 2. Investigate the fiber optic segment
+Fiber optic customers show elevated churn risk despite belonging to a premium service group. This may reflect dissatisfaction with price, service reliability, or perceived value.
+
+### 3. Use support and security services as retention levers
+Customers without **OnlineSecurity** or **TechSupport** are consistently more churn-prone. These add-ons may function not only as services, but also as retention stabilizers.
+
+### 4. Improve billing stability
+Payment behavior, particularly **electronic check**, appears strongly associated with churn risk. Encouraging more stable payment methods may reduce customer fragility.
+
+### 5. Strengthen early-tenure intervention
+Customers with shorter tenure are especially vulnerable, suggesting that onboarding and early-stage engagement are critical retention windows.
+
+### Strategic implication
+Retention effort should not be spread uniformly across the customer base. Instead, it should be concentrated on clearly identifiable high-risk segments revealed by the final model.
+
+## Visual Highlights
+
+The figures below summarize the most important analytical and modeling findings from the project.
+
+### Target distribution
+![Target Distribution](figures/target_distribution.png)
+
+### Churn rate by contract
+![Churn Rate by Contract](figures/churn_rate_by_contract.png)
+
+### Churn rate by payment method
+![Churn Rate by Payment Method](figures/churn_rate_by_payment_method.png)
+
+### Churn rate by tech support
+![Churn Rate by Tech Support](figures/churn_rate_by_tech_support.png)
+
+### Baseline model comparison
+![Baseline Model Comparison](figures/baseline_model_test_comparison.png)
+
+### Untuned vs tuned XGBoost
+![Untuned vs Tuned XGBoost](figures/xgboost_untuned_vs_tuned.png)
+
+### Default vs optimized threshold
+![Default vs Optimized Threshold](figures/default_vs_optimized_threshold.png)
+
+### Aggregated feature importance
+![Aggregated Feature Importance](figures/tuned_xgboost_aggregated_feature_importance.png)
+
+### Final model comparison
+![Final Model Comparison](figures/final_model_comparison.png)
+
+## Tools and Tech Stack
+
+This project was built with the following tools and libraries:
+
+- **Python**
+- **pandas**
+- **NumPy**
+- **Matplotlib**
+- **Seaborn**
+- **scikit-learn**
+- **XGBoost**
+- **Jupyter Notebook / Google Colab**
+
+These tools were used for data cleaning, visualization, preprocessing, model development, hyperparameter tuning, and threshold-based evaluation.
+
+## Limitations
+
+Although the final solution is strong and interpretable, several limitations remain:
+
+- the dataset does not include richer behavioral or service-interaction history
+- the model captures statistical associations rather than causal relationships
+- threshold selection is not yet tied to explicit intervention cost or retention ROI
+- churn behavior may evolve over time as services, pricing, or customer expectations change
+
+## Future Improvements
+
+Natural next steps for extending this project include:
+
+- ROI-based threshold selection
+- segment-specific intervention thresholds
+- SHAP-based local interpretability
+- deployment as a scoring API
+- retention dashboard integration
+- model monitoring and drift detection
+
+These extensions would move the project closer to a production-ready churn management system.
+
+## Final Takeaway
+
+This project shows that telecom customer churn can be modeled effectively with modern machine learning and translated into practical retention strategy.
+
+The final solution — **Tuned XGBoost with an optimized threshold of 0.30** — provides a churn prediction framework that is:
+
+- analytically rigorous
+- operationally useful
+- business-interpretable
+- portfolio-ready
+
+Beyond predictive modeling alone, this project demonstrates the ability to:
+
+- structure an end-to-end machine learning workflow
+- compare baseline and advanced models rigorously
+- optimize decision thresholds for practical use
+- interpret model behavior in business terms
+- translate technical results into actionable recommendations
+
+In short, the project is designed not just to predict churn, but to support smarter retention decisions.
+
+## Executive Summary
+
+- **Problem:** Predict telecom customer churn and support proactive retention
+- **Best baseline:** Logistic Regression
+- **Best advanced model:** Tuned XGBoost
+- **Final threshold:** 0.30
+- **Main churn drivers:** Contract, InternetService, OnlineSecurity, TechSupport, PaperlessBilling, PaymentMethod, tenure
+- **Best use case:** Retention targeting and churn-risk prioritization
