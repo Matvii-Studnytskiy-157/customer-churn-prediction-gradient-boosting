@@ -70,3 +70,30 @@ The preprocessing stage included:
 
 These steps produced a clean, model-ready dataset suitable for both interpretable analysis and predictive modeling.
 
+## Repository Structure
+
+```text
+customer-churn-prediction-gradient-boosting/
+├── data/
+│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+├── figures/
+│   ├── target_distribution.png
+│   ├── churn_rate_by_contract.png
+│   ├── churn_rate_by_payment_method.png
+│   ├── churn_rate_by_tech_support.png
+│   ├── churn_rate_by_online_security.png
+│   ├── baseline_model_test_comparison.png
+│   ├── baseline_model_roc_curves.png
+│   ├── baseline_model_pr_curves.png
+│   ├── xgboost_test_comparison.png
+│   ├── xgboost_untuned_vs_tuned.png
+│   ├── tuned_xgboost_vs_logistic_regression.png
+│   ├── threshold_tradeoff_precision_recall_f1.png
+│   ├── default_vs_optimized_threshold.png
+│   ├── tuned_xgboost_aggregated_feature_importance.png
+│   └── final_model_comparison.png
+├── notebooks/
+│   └── customer-churn-prediction-gradient-boosting.ipynb
+├── README.md
+├── requirements.txt
+└── .gitignore
