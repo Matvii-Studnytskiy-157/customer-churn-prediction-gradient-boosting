@@ -97,3 +97,52 @@ customer-churn-prediction-gradient-boosting/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+
+```markdown id="x8hrbu"
+## Methodology
+
+The project follows a structured applied machine learning workflow designed to move from raw data to business-ready churn recommendations.
+
+### 1. Data Cleaning and Preprocessing
+- hidden missing-value detection
+- numeric type correction
+- identifier removal
+- target encoding
+
+### 2. Exploratory Data Analysis
+- target imbalance analysis
+- numerical feature comparison by churn group
+- churn-rate analysis across customer segments
+- encoded feature association overview
+
+### 3. Baseline Model Benchmarking
+The following baseline models were compared:
+- Logistic Regression
+- Decision Tree
+- Random Forest
+
+### 4. Advanced Model Development
+- XGBoost model construction
+- direct comparison against the strongest baseline
+
+### 5. Hyperparameter Tuning
+- RandomizedSearchCV
+- stratified 5-fold cross-validation
+- ROC-AUC optimization
+
+### 6. Threshold Optimization
+- precision-recall trade-off analysis
+- F1-based threshold selection
+- business-oriented operating point selection
+
+### 7. Model Interpretability
+- transformed-feature importance
+- aggregated original-feature importance
+- business-driver interpretation
+
+### 8. Business Translation
+- retention segment identification
+- action-oriented recommendation design
+
+This workflow ensures that the final model is not only predictive, but also interpretable and operationally useful.
+
